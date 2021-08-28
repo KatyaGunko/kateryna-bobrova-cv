@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "Urbanist";
+  src: url("../assets/fonts/ttf/Urbanist-Regular.ttf") format("truetype"),
+    url("../assets/fonts/ttf/Urbanist-Regular.ttf") format("truetype"),
+    url("../assets/fonts/webfonts/Urbanist-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Urbanist";
+  src: url("../assets/fonts/ttf/Urbanist-Light.ttf") format("truetype"),
+  url("../assets/fonts/ttf/Urbanist-Light.ttf") format("truetype"),
+  url("../assets/fonts/webfonts/Urbanist-Light.woff2") format("woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Urbanist";
+  src: url("../assets/fonts/ttf/Urbanist-Bold.ttf") format("truetype"),
+  url("../assets/fonts/ttf/Urbanist-Bold.ttf") format("truetype"),
+  url("../assets/fonts/webfonts/Urbanist-Bold.woff2") format("woff2");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Urbanist";
+  src: url("../assets/fonts/ttf/Urbanist-ExtraBold.ttf") format("truetype"),
+  url("../assets/fonts/ttf/Urbanist-ExtraBold.ttf") format("truetype"),
+  url("../assets/fonts/webfonts/Urbanist-ExtraBold.woff2") format("woff2");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Major Mono Display";
+  src: url("../assets/fonts/major-mono-display/MajorMonoDisplay-Regular.eot") format("eot"),
+  url("../assets/fonts/major-mono-display/MajorMonoDisplay-Regular.ttf") format("truetype"),
+  url("../assets/fonts/major-mono-display/MajorMonoDisplay-Regular.woff") format("woff"),
+  url("../assets/fonts/major-mono-display/MajorMonoDisplay-Regular.woff2") format("woff2");
+}

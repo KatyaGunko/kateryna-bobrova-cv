@@ -1,0 +1,102 @@
+@import "../variables";
+
+.skills-carousel {
+  position: relative;
+  height: 150px;
+  background-color: $greenbg;
+  padding: 0;
+  overflow: visible;
+
+  .carousel {
+    position: relative;
+    height: 50px;
+    white-space: nowrap;
+
+    .skills-container {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+
+      .skill {
+        font-weight: 300;
+        font-size: 75px;
+        font-style: italic;
+        margin: 20px;
+      }
+    }
+  }
+
+  .carousel-1 .skills-container {
+    transform: translate(0, -80%);
+    animation-name: translate-left;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  .carousel-3 .skills-container {
+    transform: translate(0, -30%);
+    animation-name: translate-left;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  .carousel-2 {
+    .skills-container {
+      right: 0;
+      animation-name: translate-right;
+      animation-duration: 40s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .skills-carousel {
+    height: 210px;
+
+    .carousel {
+      height: 70px;
+
+      .skills-container {
+        .skill {
+          font-size: 100px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .skills-carousel {
+    height: 240px;
+
+    .carousel {
+      height: 80px;
+
+      .skills-container {
+        .skill {
+          font-size: 120px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .skills-carousel {
+    height: 300px;
+
+    .carousel {
+      height: 100px;
+
+      .skills-container {
+        .skill {
+          font-size: 130px;
+        }
+      }
+    }
+  }
+}

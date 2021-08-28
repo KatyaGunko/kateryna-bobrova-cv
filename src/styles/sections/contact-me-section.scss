@@ -1,0 +1,46 @@
+@import "../variables";
+
+section.contact-me {
+  margin-top: 100px;
+
+  .right {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+
+    .box {
+      padding: 20px 0;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+
+      h4 {
+        color: $green;
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 20px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  section.contact-me {
+    .left {
+      padding: calc(15% + 50px) 0 0 5%;
+    }
+
+    .right {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-rows: repeat(1, minmax(0, 1fr));
+      padding: calc(10% + 50px) 5% 5% 0;
+
+      .box {
+        padding: 20px;
+      }
+    }
+  }
+}

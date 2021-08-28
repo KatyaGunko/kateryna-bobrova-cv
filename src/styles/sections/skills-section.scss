@@ -1,0 +1,57 @@
+@import "../variables";
+
+section.skills-list {
+  display: grid;
+  padding: 10% 20%;
+  background-color: $bg;
+  grid-template-columns: repeat(1, auto);
+  grid-template-rows: repeat(4, auto);
+
+  .box {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+
+    h4 {
+      color: $green;
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 480px) {
+  section.skills-list {
+    padding: 10% 5%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+
+    .box {
+      padding: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  section.skills-list {
+    padding: 10% 15%;
+
+    .box {
+      padding: 20px;
+    }
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  section.skills-list {
+    padding: 10% 20%;
+
+    .box {
+      padding: 20px;
+    }
+  }
+}

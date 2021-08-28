@@ -1,0 +1,28 @@
+@import "font";
+@import "reset";
+@import "variables";
+@import "animations";
+@import "general";
+
+@import "sections";
+
+section.work-experience,
+section.education {
+  .job-title,
+  .education-title {
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+
+  .date {
+    text-transform: uppercase;
+    font-style: italic;
+    line-height: 2;
+  }
+}
+
+
+
+
+
+

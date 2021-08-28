@@ -1,0 +1,17 @@
+@keyframes translate-right {
+  from {
+    right: 0;
+  }
+  to {
+    right: -100%;
+  }
+}
+
+@keyframes translate-left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
