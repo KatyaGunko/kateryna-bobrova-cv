@@ -2,7 +2,7 @@
 
 .skills-carousel {
   position: relative;
-  height: 150px;
+  height: 200px;
   background-color: $greenbg;
   padding: 0;
   overflow: visible;
@@ -34,16 +34,9 @@
     animation-timing-function: linear;
   }
 
-  .carousel-3 .skills-container {
-    transform: translate(0, -30%);
-    animation-name: translate-left;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-  }
-
   .carousel-2 {
     .skills-container {
+      transform: translate(0, -60%);
       right: 0;
       animation-name: translate-right;
       animation-duration: 40s;
@@ -51,11 +44,28 @@
       animation-timing-function: linear;
     }
   }
+
+  .carousel-3 .skills-container {
+    transform: translate(0, -40%);
+    animation-name: translate-left;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+
+  .carousel-4 .skills-container {
+    transform: translate(0, -30%);
+    right: 0;
+    animation-name: translate-right;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
 }
 
 @media screen and (min-width: 480px) {
   .skills-carousel {
-    height: 210px;
+    height: 280px;
 
     .carousel {
       height: 70px;
@@ -71,7 +81,7 @@
 
 @media screen and (min-width: 768px) {
   .skills-carousel {
-    height: 240px;
+    height: 320px;
 
     .carousel {
       height: 80px;
@@ -87,7 +97,7 @@
 
 @media screen and (min-width: 1024px) {
   .skills-carousel {
-    height: 300px;
+    height: 400px;
 
     .carousel {
       height: 100px;

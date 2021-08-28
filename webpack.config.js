@@ -2,18 +2,10 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  target: "web",
   mode: "production",
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "dist"),
     filename: "index.js",
-  },
-  watch: true,
-  watchOptions: {
-    aggregateTimeout: 200,
-    poll: 1000,
-    ignored: /node_modules/,
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -21,10 +13,6 @@ module.exports = {
       template: "./index.html",
     }),
   ],
-  experiments: {
-    asset: true,
-  },
-  devtool: "inline-source-map",
   module: {
     rules: [
       {

@@ -2,21 +2,32 @@
 
 section.quote {
   position: relative;
-  height: 278px;
+  padding: 7% 10%;
   background-color: $greenbg;
 
   h4 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 336px;
-    font-weight: 300;
-    font-size: 45px;
+    position: relative;
+    font-weight: bold;
+    font-size: 35px;
     font-style: italic;
-    text-align: center;
     line-height: 1.25;
     margin: 0;
+    text-align: left;
+    text-transform: uppercase;
+
+    .transparent-body {
+      opacity: 0;
+    }
+
+    .visible-body {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      .caret {
+        font-weight: 300;
+      }
+    }
 
     .author {
       font-size: 20px;
@@ -27,62 +38,8 @@ section.quote {
   }
 }
 
-@media screen and (min-width: 480px) {
-  section.quote {
-    height: 200px;
-
-    h4 {
-      font-size: 45px;
-      width: 80%;
-    }
-  }
-}
-
-@media screen and (min-width: 640px) {
-  section.quote {
-    height: 180px;
-
-    h4 {
-      font-size: 50px;
-    }
-  }
-}
-
 @media screen and (min-width: 768px) {
   section.quote {
-    height: 200px;
-
-    h4 {
-      font-size: 55px;
-    }
-  }
-}
-
-@media screen and (min-width: 898px) {
-  section.quote {
-    height: 200px;
-
-    h4 {
-      font-size: 60px;
-      width: 70%;
-    }
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  section.quote {
-    h4 {
-      font-size: 60px;
-      width: 60%;
-    }
-  }
-}
-
-@media screen and (min-width: 1300px) {
-  section.quote {
-    h4 {
-      font-size: 75px;
-      width: 70%;
-    }
+    h4 {}
   }
 }
