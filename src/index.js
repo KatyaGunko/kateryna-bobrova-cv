@@ -5,4 +5,3 @@ import "./scripts/skills";
 import "./scripts/eduacation";
 import "./scripts/carousel";
 import "./scripts/quote";
-import "./scripts/print";
