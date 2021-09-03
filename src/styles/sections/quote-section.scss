@@ -13,7 +13,6 @@ section.quote {
     line-height: 1.25;
     margin: 0;
     text-align: left;
-    text-transform: uppercase;
 
     .transparent-body {
       opacity: 0;
@@ -27,6 +26,10 @@ section.quote {
       .caret {
         font-weight: 300;
       }
+    }
+
+    .text {
+      font-family: sans;
     }
 
     .author {

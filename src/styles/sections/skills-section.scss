@@ -2,15 +2,16 @@
 
 section.skills-list {
   display: grid;
-  padding: 10% 20%;
+  padding: 10%;
   background-color: $bg;
   grid-template-columns: repeat(1, auto);
   grid-template-rows: repeat(4, auto);
 
   .box {
-    padding: 20px;
+    padding: 20px 0;
     width: 100%;
     box-sizing: border-box;
+    text-align: center;
 
     h4 {
       color: $green;
@@ -19,6 +20,7 @@ section.skills-list {
 
     p {
       font-size: 20px;
+      text-align: center;
     }
   }
 }
@@ -31,6 +33,11 @@ section.skills-list {
 
     .box {
       padding: 10px;
+      text-align: left;
+
+      p {
+        text-align: left;
+      }
     }
   }
 }

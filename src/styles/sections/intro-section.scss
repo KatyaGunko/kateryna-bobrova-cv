@@ -5,7 +5,7 @@
   overflow: hidden;
 
   .title-section {
-    padding: 70px 20px;
+    padding: 150px 20px 80px;
     font-size: 60px;
     align-items: center;
 
@@ -21,9 +21,11 @@
           font-weight: 300;
           font-size: 50px;
           font-style: italic;
+          font-family: sans;
 
           b {
             font-weight: 900;
+            font-family: sans;
           }
         }
 
@@ -33,9 +35,11 @@
           font-weight: 300;
           font-size: 50px;
           font-style: italic;
+          font-family: sans;
 
           b {
             font-weight: 900;
+            font-family: sans;
           }
         }
       }
@@ -44,6 +48,70 @@
 
   .photo-section {
     display: none;
+  }
+
+  .tooltip {
+    position: relative;
+  }
+
+  .tooltip .tooltiptext {
+    position: absolute;
+    top: 50%;
+    left: 130%;
+    transform: translate(0, -50%);
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    width: 120px;
+    background-color: $grey;
+    color: $white;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  .tooltip .tooltiptext::after {
+    position: absolute;
+    content: " ";
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    margin-left: -10px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent $grey transparent transparent;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .download-cv {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+
+    i {
+      color: rgba($grey, 0.5);
+      font-size: 34px;
+      transition: color 0.2s ease-in-out;
+
+      &:hover,
+      &:active {
+        color: $grey;
+      }
+    }
+
+    &:hover,
+    &:active {
+      background-color: transparent;
+    }
   }
 }
 
@@ -87,12 +155,18 @@
       h1 {
         .bolder-header {
           .software {
-            font-size: 60px;
+            font-size: 50px;
           }
 
           .engineer {
-            font-size: 60px;
+            font-size: 50px;
           }
+        }
+      }
+
+      .email-me-btn {
+        span {
+          font-size: 12px;
         }
       }
     }
@@ -114,6 +188,38 @@
   .intro-header {
 
     .title-section {
+      padding: 20px 30%;
+
+      h1 {
+        font-size: 50px;
+
+        .bolder-header {
+          .software {
+            left: 20%;
+            font-size: 80px;
+          }
+
+          .engineer {
+            left: 40%;
+            font-size: 80px;
+          }
+        }
+      }
+
+      .email-me-btn {
+        span {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .intro-header {
+
+    .title-section {
+      padding: 20px 30%;
 
       h1 {
         font-size: 60px;
@@ -121,76 +227,21 @@
         .bolder-header {
           .software {
             left: 20%;
-            font-size: 90px;
+            font-size: 110px;
           }
 
           .engineer {
             left: 40%;
-            font-size: 90px;
+            font-size: 110px;
           }
+        }
+      }
+
+      .email-me-btn {
+        span {
+          font-size: 16px;
         }
       }
     }
   }
 }
-
-//.intro-header {
-//  display: flex;
-//  width: 100%;
-//  background-color: $bg;
-//  overflow: hidden;
-//
-//  .title-section {
-//    display: flex;
-//    flex: 1 0 50%;
-//    padding: 20px;
-//    font-size: 60px;
-//    align-items: center;
-//
-//    .central-container {
-//      padding: 0 15%;
-//    }
-//
-//    h1 {
-//      flex-grow: 1;
-//      font-weight: 300;
-//
-//      .bolder-header {
-//        .software {
-//          position: relative;
-//          left: 20%;
-//          font-weight: 300;
-//          font-size: 90px;
-//          font-style: italic;
-//
-//          b {
-//            font-weight: 900;
-//          }
-//        }
-//
-//        .engineer {
-//          position: relative;
-//          left: 40%;
-//          font-weight: 300;
-//          font-size: 90px;
-//          font-style: italic;
-//
-//          b {
-//            font-weight: 900;
-//          }
-//        }
-//      }
-//    }
-//  }
-//
-//  .photo-section {
-//    display: flex;
-//    flex: 1 0 50%;
-//    padding: 20px;
-//
-//    img {
-//      width: 100%;
-//      display: inline-block;
-//    }
-//  }
-//}
