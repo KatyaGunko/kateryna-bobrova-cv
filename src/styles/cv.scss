@@ -1,0 +1,89 @@
+.print-body {
+  padding: 100px 0;
+}
+
+.print {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 15px 40px;
+}
+
+.print-block {
+  margin: 0 auto;
+  width: 210mm;
+  height: (297 * 2)mm;
+  -webkit-box-shadow: 2px 2px 7px 0px rgba(0,0,0,0.44);
+  box-shadow: 2px 2px 7px 0px rgba(0,0,0,0.44);
+
+  p {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 36px;
+    color: $grey;
+  }
+
+  h3,
+  h4 {
+    text-transform: uppercase;
+    color: $green;
+  }
+
+  section.two-columns {
+    display: flex;
+    flex-direction: row;
+
+    .mobile-hidden {
+      display: none;
+    }
+
+    h3 {
+      text-align: left;
+    }
+
+    .left {
+      padding: 20px 40px;
+      flex: 1 0 60%;
+    }
+
+    .right {
+      padding: 20px 40px;
+      flex: 1 0 40%;
+      background-color: $bg;
+
+      .box {
+        padding: 19px 0;
+      }
+    }
+
+    &.latest-projects {
+      .left {
+        padding: 0 40px;
+      }
+
+      .right {
+        padding: 0 40px;
+
+        .box.first {
+          margin-top: 68px;
+        }
+
+        &.last {
+          height: 265px;
+        }
+      }
+    }
+  }
+
+  section.skills-list {
+    .box {
+      text-align: left;
+
+      p {
+        text-align: left;
+      }
+    }
+  }
+}

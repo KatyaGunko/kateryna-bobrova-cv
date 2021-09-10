@@ -11,17 +11,22 @@ const education = [
   },
 ];
 
-document.addEventListener("DOMContentLoaded", (event) => {
+export default function initEducationView() {
   const educationWebView = document.querySelector(
     ".do-not-print .education .right"
   );
   const educationPrintView = document.querySelector(
-    ".only-print .education .left"
+    ".print-block .education .left"
   );
 
-  mountEducationInfo(educationWebView);
-  mountEducationInfo(educationPrintView);
-});
+  if (educationWebView) {
+    mountEducationInfo(educationWebView);
+  }
+
+  if (educationPrintView) {
+    mountEducationInfo(educationPrintView);
+  }
+}
 
 function mountEducationInfo(container) {
   container.innerHTML =

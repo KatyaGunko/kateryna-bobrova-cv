@@ -24,6 +24,7 @@
     "webpack-dev-server": "^4.0.0"
   },
   "dependencies": {
+    "html2pdf.js": "^0.10.1",
     "prettier": "^2.3.2"
   }
 }

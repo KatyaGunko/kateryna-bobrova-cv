@@ -47,14 +47,16 @@ button {
   border-radius: 0;
   padding: 15px 60px;
   font-size: 18px;
-  background-color: $white;
+  background-color: transparent;
   font-weight: bold;
-  margin-top: 80px;
   cursor: pointer;
+  transition: background-color .2s ease-in-out;
+  color: $grey;
 
   &:hover {
     background-color: $grey;
     color: $green;
+
   }
 }
 
@@ -197,89 +199,4 @@ p {
   font-weight: 300;
   padding: 19px 0;
   line-height: 1.5;
-}
-
-.only-print {
-  display: none;
-}
-
-.print-mode {
-  .do-not-print {
-    display: none;
-  }
-
-  .only-print {
-    display: block;
-  }
-
-  p {
-    font-size: 14px;
-  }
-
-  h2 {
-    font-size: 36px;
-    color: $grey;
-  }
-
-  h3,
-  h4 {
-    text-transform: uppercase;
-    color: $green;
-  }
-
-  section.two-columns {
-    display: flex;
-    flex-direction: row;
-
-    .mobile-hidden {
-      display: none;
-    }
-
-    h3 {
-      text-align: left;
-    }
-
-    .left {
-      padding: 20px 40px;
-      flex: 1 0 60%;
-    }
-
-    .right {
-      padding: 20px 40px;
-      flex: 1 0 40%;
-      background-color: $bg;
-
-      .box {
-        padding: 19px 0;
-      }
-    }
-
-    &.latest-projects {
-      .left {
-        padding: 0 40px;
-      }
-
-      .right {
-        padding: 0 40px;
-
-        .box.first {
-          margin-top: 68px;
-        }
-
-        &.last {
-          height: 265px;
-        }
-      }
-    }
-  }
-
-  section.skills-list {
-    .box {
-      text-align: left;
-
-      p {
-        text-align: left;
-      }
-    }
-  }
 }

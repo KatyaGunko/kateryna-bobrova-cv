@@ -35,17 +35,22 @@ const SKILLS = [
   ],
 ];
 
-document.addEventListener("DOMContentLoaded", (event) => {
+export default function initSkillsView() {
   const skillsBoxesWebView = document.querySelectorAll(
     ".do-not-print .skills-list .box"
   );
   const skillsBoxesPrintView = document.querySelectorAll(
-    ".only-print .skills-list .box"
+    ".print-block .skills-list .box"
   );
 
-  skillsBoxesWebView.forEach(mountSkillsIntoBox);
-  skillsBoxesPrintView.forEach(mountSkillsIntoBox);
-});
+  if (skillsBoxesWebView) {
+    skillsBoxesWebView.forEach(mountSkillsIntoBox);
+  }
+
+  if (skillsBoxesPrintView) {
+    skillsBoxesPrintView.forEach(mountSkillsIntoBox);
+  }
+}
 
 function mountSkillsIntoBox(box, index) {
   const skills = SKILLS[index];

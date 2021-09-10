@@ -40,17 +40,22 @@ const workExperience = [
   },
 ];
 
-document.addEventListener("DOMContentLoaded", (event) => {
+export default function initWorkExperienceView() {
   const workExperienceWebView = document.querySelector(
     ".do-not-print .work-experience .right"
   );
   const workExperiencePrintView = document.querySelector(
-    ".only-print .work-experience .left"
+    ".print-block .work-experience .left"
   );
 
-  mountWorkExperience(workExperienceWebView);
-  mountWorkExperience(workExperiencePrintView);
-});
+  if (workExperienceWebView) {
+    mountWorkExperience(workExperienceWebView);
+  }
+
+  if (workExperiencePrintView) {
+    mountWorkExperience(workExperiencePrintView);
+  }
+}
 
 function mountWorkExperience(container) {
   container.innerHTML =

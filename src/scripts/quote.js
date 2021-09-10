@@ -1,43 +1,55 @@
-document.addEventListener("DOMContentLoaded", (event) => {
-  const text =
-    '"It is not enough to do your best: you must KNOW what to do, and THEN do your best."';
-  const textLen = text.length;
-  const quoteText = document.querySelector(".quote-header .visible-body .text");
-  const quoteCaret = document.querySelector(
+const TEXT =
+  '"It is not enough to do your best: you must KNOW what to do, and THEN do your best." – W. Edwards Deming.';
+const CARET_BLINKING_INTERVAL = 250;
+const DELAY_TO_NEXT_LETTER = 100;
+const DELAY_BEFORE_TEXT_CLEANUP = 2000;
+
+export default function initQuote() {
+  const quoteTextContainer = document.querySelector(
+    ".quote-header .visible-body .text"
+  );
+  const quoteCaretElement = document.querySelector(
     ".quote-header .visible-body .caret"
   );
-  const DELTA = 100;
-  let index = 0;
+
+  if (quoteTextContainer && quoteCaretElement) {
+    initCaretBlinking(quoteCaretElement);
+    initTextTyping(quoteTextContainer, TEXT);
+  }
+}
+
+function initCaretBlinking(quoteCaretElement) {
   let caretVisible = true;
 
   setInterval(() => {
     if (caretVisible) {
-      quoteCaret.style.opacity = 0;
+      quoteCaretElement.style.opacity = 0;
       caretVisible = false;
     } else {
-      quoteCaret.style.opacity = 1;
+      quoteCaretElement.style.opacity = 1;
       caretVisible = true;
     }
-  }, 250);
+  }, CARET_BLINKING_INTERVAL);
+}
 
-  initInterval();
+function initTextTyping(quoteTextContainer, text) {
+  let currentLetterIndex = 0;
 
-  function initInterval() {
-    const interval = setInterval(() => {
-      if (index === textLen) {
-        clearInterval(interval);
+  const interval = setInterval(() => {
+    if (currentLetterIndex === text.length) {
+      clearInterval(interval);
 
-        setTimeout(() => {
-          quoteText.innerHTML = "";
-          index = 0;
-          initInterval();
-        }, 2000);
+      setTimeout(() => {
+        quoteTextContainer.innerHTML = "";
+        currentLetterIndex = 0;
+        initTextTyping(quoteTextContainer, text);
+      }, DELAY_BEFORE_TEXT_CLEANUP);
 
-        return;
-      }
+      return;
+    }
 
-      quoteText.innerHTML = quoteText.innerHTML + text[index];
-      index++;
-    }, DELTA);
-  }
-});
+    quoteTextContainer.innerHTML =
+      quoteTextContainer.innerHTML + text[currentLetterIndex];
+    currentLetterIndex++;
+  }, DELAY_TO_NEXT_LETTER);
+}

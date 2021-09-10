@@ -12,6 +12,10 @@ module.exports = {
       filename: "index.html",
       template: "./index.html",
     }),
+    new HtmlWebpackPlugin({
+      filename: "cv.html",
+      template: "./cv.html",
+    }),
   ],
   module: {
     rules: [
@@ -22,6 +26,13 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
+      },
+      {
+        test: /\.(pdf)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "Kateryna_Bobrova_CV.pdf",
+        },
       },
       {
         test: /\.s[ac]ss$/i,

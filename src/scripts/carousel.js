@@ -38,47 +38,37 @@ const HELPER_SKILLS = [
   "Prettier",
 ];
 
-document.addEventListener("DOMContentLoaded", (event) => {
+export default function initCarousel() {
   const carousel1 = document.querySelector(".carousel-1 .skills-container");
   const carousel2 = document.querySelector(".carousel-2 .skills-container");
   const carousel3 = document.querySelector(".carousel-3 .skills-container");
   const carousel4 = document.querySelector(".carousel-4 .skills-container");
 
-  LANGUAGE_SKILLS.forEach((skill) => {
+  if (carousel1) {
+    mountSkillsToCarousel(carousel1, LANGUAGE_SKILLS);
+  }
+
+  if (carousel2) {
+    mountSkillsToCarousel(carousel2, GENERAL_SKILLS);
+  }
+
+  if (carousel3) {
+    mountSkillsToCarousel(carousel3, HELPER_SKILLS);
+  }
+
+  if (carousel4) {
+    mountSkillsToCarousel(carousel4, LANGUAGE_SKILLS);
+  }
+}
+
+function mountSkillsToCarousel(carousel, SKILLS) {
+  [...SKILLS, ...SKILLS].forEach((skill) => {
     const el = document.createElement("span");
     el.classList.add("skill");
     el.innerHTML = `<span class="first-letter">${
       skill[0]
     }</span>${skill.substring(1)} ―`;
 
-    carousel1.appendChild(el);
+    carousel.appendChild(el);
   });
-  GENERAL_SKILLS.forEach((skill) => {
-    const el = document.createElement("span");
-    el.classList.add("skill");
-    el.innerHTML = `<span class="first-letter">${
-      skill[0]
-    }</span>${skill.substring(1)} ―`;
-
-    carousel2.appendChild(el);
-  });
-  HELPER_SKILLS.forEach((skill) => {
-    const el = document.createElement("span");
-    el.classList.add("skill");
-    el.innerHTML = `<span class="first-letter">${
-      skill[0]
-    }</span>${skill.substring(1)} ―`;
-
-    carousel3.appendChild(el);
-  });
-
-  LANGUAGE_SKILLS.forEach((skill) => {
-    const el = document.createElement("span");
-    el.classList.add("skill");
-    el.innerHTML = `<span class="first-letter">${
-      skill[0]
-    }</span>${skill.substring(1)} ―`;
-
-    carousel4.appendChild(el);
-  });
-});
+}
