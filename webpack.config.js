@@ -11,6 +11,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "./index.html",
+      inject: "head",
     }),
     new HtmlWebpackPlugin({
       filename: "cv.html",
