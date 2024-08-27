@@ -19,11 +19,10 @@ const SKILLS = [
   [
     "JavaScript / TypeScript",
     "HTML / HTML5 / CSS / CSS3",
-    "Angular",
     "React",
+    "Angular",
     "Node.js",
     "Express",
-    "Redux / Rx.js",
     "Jasmine / Karma / Mocha / Chai",
   ],
   [

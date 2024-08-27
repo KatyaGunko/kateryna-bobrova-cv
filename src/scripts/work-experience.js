@@ -1,8 +1,15 @@
 const workExperience = [
   {
+    title: "Delinea",
+    position: "Senior JavaScript Engineer",
+    period: "DECEMBER 2021 - PRESENT",
+    description:
+      "Managing development workflow at Security Monitoring Web application.",
+  },
+  {
     title: "Amazon",
     position: "Front End Engineer",
-    period: "APRIL 2021 - PRESENT",
+    period: "APRIL 2021 - NOVEMBER 2021",
     description:
       "Building Web application for Deals microservice at Amazon Retail website.",
   },
@@ -25,12 +32,6 @@ const workExperience = [
     period: "JUNE 2016 - MAY 2017",
     description:
       "Building Web Apps using JavaScript latest Front-End technologies.",
-  },
-  {
-    title: "Fabware",
-    position: "JavaScript Software Engineer",
-    period: "MARCH 2016 - JUNE 2016",
-    description: "Building POS applications using Angular.js.",
   },
   {
     title: "PioGroup",
@@ -68,7 +69,7 @@ function mountWorkExperience(container) {
                   <span class="bold">${company.title}</span> — ${company.position}
                 </span>
                 <br />
-                <span class="date">${company.period}T</span>
+                <span class="date">${company.period}</span>
                 <br />
                 ${company.description}
               </p>
